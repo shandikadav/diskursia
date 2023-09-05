@@ -191,23 +191,21 @@ class _HomePageState extends State<HomePage> {
   Widget _buildMenuHomepage() {
     return Padding(
       padding: const EdgeInsets.all(10),
-      child: Expanded(
-        child: SizedBox(
-            width: double.infinity,
-            height: 300,
-            child: Container(
-                // color: Colors.amber,
-                margin: const EdgeInsets.only(top: 0, bottom: 0),
-                child: GridView.builder(
-                    padding: EdgeInsets.only(),
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: 6,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4),
-                    itemBuilder: (context, position) {
-                      return _rowMenuHomepage(_menuList[position]);
-                    }))),
-      ),
+      child: SizedBox(
+          width: double.infinity,
+          height: 300,
+          child: Container(
+              // color: Colors.amber,
+              margin: const EdgeInsets.only(top: 0, bottom: 0),
+              child: GridView.builder(
+                  padding: EdgeInsets.only(),
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 6,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4),
+                  itemBuilder: (context, position) {
+                    return _rowMenuHomepage(_menuList[position]);
+                  }))),
     );
   }
 
