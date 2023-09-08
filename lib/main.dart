@@ -1,3 +1,4 @@
+import 'package:eresource/pages/borrowmenu_page.dart';
 import 'package:eresource/pages/homepage.dart';
 import 'package:eresource/pages/login_page.dart';
 import 'package:eresource/pages/splash_screen.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashPages(),
         '/login': (context) => const LoginPage(),
         '/homepage': (context) => const HomePage(),
+        '/borrowpage': (context) => const BorrowPage(),
       },
     );
   }
