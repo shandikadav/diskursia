@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
 import '../models/homepage_model.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<MenuHomepage> _menuList = [];
+  final List<MenuBuku> _bukuList = [];
   final CarouselController _controller = CarouselController();
   final List<Widget> imageSliders = [
     Container(
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       ),
       child: Image.asset(
         'assets/banner_homepage.png',
-        height: 100,
+        height: 115,
         fit: BoxFit.fill,
       ),
     ),
@@ -40,14 +41,16 @@ class _HomePageState extends State<HomePage> {
     )
   ];
   @override
-  
   void initState() {
     super.initState();
 
+    //belum bisa menampilkan svg
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_pinjam.png',
-        fit: BoxFit.fill,
+      image: SvgPicture.asset(
+        'assets/menu_pinjam.svg',
+        width: 20,
+        height: 20,
+        // fit: BoxFit.fill,
       ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
@@ -62,7 +65,7 @@ class _HomePageState extends State<HomePage> {
       title: "Pinjaman Aktif",
       navigator: "/pinjamaktifpage",
     ));
-     _menuList.add(MenuHomepage(
+    _menuList.add(MenuHomepage(
       image: Image.asset(
         'assets/menu_riwayat.png',
         fit: BoxFit.fill,
@@ -97,6 +100,46 @@ class _HomePageState extends State<HomePage> {
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Bantuan",
       navigator: "/bantuanpage",
+    ));
+
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku3.png',
+        width: 136,
+        height: 216,
+      ),
+      title: "I LOST A PLANET AND GAINED A HOME",
+      penulis: "Katie Johnson",
+      tipe: "Hard Book",
+      tersedia: 2,
+      kategori: "Novel",
+      navigator: "/buku1",
+    ));
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku3.png',
+        width: 136,
+        height: 216,
+      ),
+      title: "NOVEL MELANGKAH BERSAMA",
+      penulis: "Olivia Wilson",
+      tipe: "Hard Book",
+      tersedia: 4,
+      kategori: "Novel",
+      navigator: "/buku2",
+    ));
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku3.png',
+        width: 136,
+        height: 216,
+      ),
+      title: "ARUS DERAS MENENANGKAN",
+      penulis: "Olivia Wilson",
+      tipe: "Hard Book",
+      tersedia: 4,
+      kategori: "Novel",
+      navigator: "/buku2",
     ));
   }
 
@@ -142,70 +185,120 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: IconButton(
-                    onPressed: () {
-                    },
-                    icon: IconButton(
-                      padding: const EdgeInsets.only(right: 21),
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.notifications_none_outlined,
-                        color: Colors.black,
-                        size: 30,
-                      ),
+                    padding: EdgeInsets.zero,
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.notifications_none_outlined,
+                      color: Colors.black,
+                      size: 30,
                     ),
                   ),
                 ),
               ],
             ),
+            SizedBox(
+              height: 0,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                'Informasi Perpustakaan',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: CarouselSlider(
-                    items: imageSliders,
-                    carouselController: _controller,
-                    options: CarouselOptions(
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 5),
-                      viewportFraction: 0.9,
-                      enlargeCenterPage: true,
-                      aspectRatio: 15 / 5,
-                      enableInfiniteScroll: true,
-                    ),
-                  ),
+                items: imageSliders,
+                carouselController: _controller,
+                options: CarouselOptions(
+                  height: 115,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 5),
+                  viewportFraction: 0.85,
+                  enlargeCenterPage: false,
+                  aspectRatio: 15 / 5,
+                  enableInfiniteScroll: true,
+                ),
+              ),
             ),
             const Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Text(
-                    'Menu',
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            _buildMenuHomepage(),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Rekomendasi Buku',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-            _buildMenuHomepage(),
+                  TextButton(
+                    style: ButtonStyle(
+                        overlayColor:
+                            MaterialStateProperty.all(Colors.transparent)),
+                    onPressed: () {},
+                    child: Text(
+                      'Lihat Semua',
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 52, 135, 141)),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: _buildRekomendasiBuku(),
+            ),
           ],
         ),
       ),
     );
   }
+
   Widget _buildMenuHomepage() {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: SizedBox(
-          width: double.infinity,
-          height: 300,
-          child: Container(
-              // color: Colors.amber,
-              margin: const EdgeInsets.only(top: 0, bottom: 0),
-              child: GridView.builder(
-                  padding: EdgeInsets.only(),
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 6,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4),
-                  itemBuilder: (context, position) {
-                    return _rowMenuHomepage(_menuList[position]);
-                  }))),
+    return SizedBox(
+      width: double.infinity,
+      height: 220,
+      child: Container(
+        // color: Colors.amber,
+        // margin: const EdgeInsets.only(top: 0, bottom: 50),
+        child: GridView.builder(
+          padding: EdgeInsets.all(10),
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: _menuList.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 4,
+            mainAxisSpacing: 5,
+          ),
+          itemBuilder: (context, position) {
+            return _rowMenuHomepage(_menuList[position]);
+          },
+        ),
+      ),
     );
   }
 
@@ -237,11 +330,132 @@ class _HomePageState extends State<HomePage> {
           Text(
             MenuHomepage.title,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 11, ),
+            style: const TextStyle(
+              fontSize: 12,
+            ),
           )
         ],
       ),
     );
   }
-}
 
+  Widget _buildRekomendasiBuku() {
+    return GridView.builder(
+      itemCount: _bukuList.length,
+      shrinkWrap: true,
+      physics: const ScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        childAspectRatio: 4 / 7.7,
+        crossAxisCount: 2,
+        mainAxisSpacing: 5,
+      ),
+      itemBuilder: (context, position) {
+        return _rowRekomendasiBuku(_bukuList[position]);
+      },
+    );
+  }
+
+  Widget _rowRekomendasiBuku(MenuBuku) {
+    return InkWell(
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
+      onTap: () {
+        Navigator.of(context).pushNamed(MenuBuku.navigator);
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            side: BorderSide(color: const Color.fromARGB(60, 0, 0, 0))),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: ClipRRect(child: MenuBuku.image),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, right: 18, top: 5),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    MenuBuku.title,
+                    textAlign: TextAlign.start,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(
+                      MenuBuku.penulis,
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10,
+                        color: Color.fromRGBO(21, 80, 60, 1.0),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(
+                      "Tipe Buku : ${MenuBuku.tipe}",
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10,
+                        color: Color.fromRGBO(21, 80, 60, 1.0),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(
+                      "Tersedia : ${MenuBuku.tersedia}",
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10,
+                        color: Color.fromRGBO(21, 80, 60, 1.0),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(
+                      "Kategori : ${MenuBuku.kategori}",
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10,
+                        color: Color.fromRGBO(21, 80, 60, 1.0),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
