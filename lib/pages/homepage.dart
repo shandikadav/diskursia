@@ -44,13 +44,13 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    //belum bisa menampilkan svg
+    //belum bisa menampilkan icon svg
     _menuList.add(MenuHomepage(
-      image: SvgPicture.asset(
-        'assets/menu_pinjam.svg',
+      image: Image.asset(
+        'assets/menu_pinjam.png',
         width: 20,
         height: 20,
-        // fit: BoxFit.fill,
+        fit: BoxFit.fill,
       ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
