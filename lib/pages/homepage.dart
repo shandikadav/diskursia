@@ -213,7 +213,7 @@ class _HomePageState extends State<HomePage> {
               height: 12,
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding: const EdgeInsets.only(bottom: 10),
               child: CarouselSlider(
                 items: imageSliders,
                 carouselController: _controller,
@@ -293,7 +293,7 @@ class _HomePageState extends State<HomePage> {
           itemCount: _menuList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
-            mainAxisSpacing: 5,
+            mainAxisSpacing: 10,
           ),
           itemBuilder: (context, position) {
             return _rowMenuHomepage(_menuList[position]);
