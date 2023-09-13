@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import '../models/homepage_model.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
       ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
-      navigator: "/pinjampage",
+      navigator: "/borrowpage",
     ));
     _menuList.add(MenuHomepage(
       image: Image.asset(

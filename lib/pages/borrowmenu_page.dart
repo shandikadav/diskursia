@@ -12,7 +12,9 @@ class BorrowPage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
               icon: Icon(
                 Icons.arrow_back_ios_new,
                 color: Colors.black,
@@ -20,17 +22,19 @@ class BorrowPage extends StatelessWidget {
               )),
           title: Text(
             "Pinjam Buku",
-            style: TextStyle(color: Colors.black, fontSize: 16, fontFamily: 'Inter', fontWeight: FontWeight.w700),
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w700),
           ),
         ),
         body: ListView(
-          children: [
-           
-          ],
+          children: [],
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color.fromRGBO(97, 75, 195, 1.0),
-          onPressed: (){},
+          onPressed: () {},
           child: Icon(Icons.add),
         ),
       ),
