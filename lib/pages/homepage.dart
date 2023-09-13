@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
         fit: BoxFit.fill,
       ),
       color: const Color.fromARGB(255, 21, 80, 60),
-      title: "Pinjam Ruangan",
+      title: "Pinjam Ruang",
       navigator: "/ruanganpage",
     ));
     _menuList.add(MenuHomepage(
@@ -225,6 +225,7 @@ class _HomePageState extends State<HomePage> {
                   enlargeCenterPage: false,
                   aspectRatio: 15 / 5,
                   enableInfiniteScroll: true,
+                  padEnds: false
                 ),
               ),
             ),
@@ -345,9 +346,9 @@ class _HomePageState extends State<HomePage> {
       shrinkWrap: true,
       physics: const ScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 4 / 7.7,
+        childAspectRatio: 4 / 9,
         crossAxisCount: 2,
-        mainAxisSpacing: 5,
+        mainAxisSpacing: 6,
       ),
       itemBuilder: (context, position) {
         return _rowRekomendasiBuku(_bukuList[position]);
