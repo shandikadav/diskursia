@@ -1,10 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../models/homepage_model.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -105,8 +108,7 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        width: 136,
-        height: 216,
+        fit: BoxFit.cover,
       ),
       title: "I LOST A PLANET AND GAINED A HOME",
       penulis: "Katie Johnson",
@@ -118,8 +120,7 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        width: 136,
-        height: 216,
+        fit: BoxFit.cover,
       ),
       title: "NOVEL MELANGKAH BERSAMA",
       penulis: "Olivia Wilson",
@@ -131,8 +132,7 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        width: 136,
-        height: 216,
+        fit: BoxFit.cover,
       ),
       title: "ARUS DERAS MENENANGKAN",
       penulis: "Olivia Wilson",
@@ -218,15 +218,14 @@ class _HomePageState extends State<HomePage> {
                 items: imageSliders,
                 carouselController: _controller,
                 options: CarouselOptions(
-                  height: 115,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 5),
-                  viewportFraction: 0.85,
-                  enlargeCenterPage: false,
-                  aspectRatio: 15 / 5,
-                  enableInfiniteScroll: true,
-                  padEnds: false
-                ),
+                    height: 115,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 5),
+                    viewportFraction: 0.85,
+                    enlargeCenterPage: false,
+                    aspectRatio: 15 / 5,
+                    enableInfiniteScroll: true,
+                    padEnds: false),
               ),
             ),
             const Padding(
@@ -341,14 +340,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildRekomendasiBuku() {
-    return GridView.builder(
+    return MasonryGridView.builder(
+      mainAxisSpacing: 6,
       itemCount: _bukuList.length,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 4 / 9,
+      gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+        // childAspectRatio: 4 / 8,
         crossAxisCount: 2,
-        mainAxisSpacing: 6,
+        // mainAxisExtent: 360,
       ),
       itemBuilder: (context, position) {
         return _rowRekomendasiBuku(_bukuList[position]);
@@ -369,12 +369,19 @@ class _HomePageState extends State<HomePage> {
             side: BorderSide(color: const Color.fromARGB(60, 0, 0, 0))),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: ClipRRect(child: MenuBuku.image),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 8),
+            //   child: ClipRRect(child: MenuBuku.image),
+            // ),
+            Container(
+              margin: EdgeInsets.all(8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(0),
+                child: MenuBuku.image,
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 18, right: 18, top: 5),
+              padding: const EdgeInsets.only(left: 18, right: 18, top: 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -389,7 +396,7 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 12),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 4),
+                    padding: const EdgeInsets.only(top: 2),
                     child: Text(
                       MenuBuku.penulis,
                       textAlign: TextAlign.start,
@@ -451,6 +458,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 15,
+                  )
                 ],
               ),
             ),
