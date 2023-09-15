@@ -108,8 +108,6 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        // width: 136,
-        // height: 216,
         fit: BoxFit.cover,
       ),
       title: "I LOST A PLANET AND GAINED A HOME",
@@ -122,8 +120,6 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        width: 136,
-        height: 216,
         fit: BoxFit.cover,
       ),
       title: "NOVEL MELANGKAH BERSAMA",
@@ -136,8 +132,6 @@ class _HomePageState extends State<HomePage> {
     _bukuList.add(MenuBuku(
       image: Image.asset(
         'assets/buku3.png',
-        width: 136,
-        height: 216,
         fit: BoxFit.cover,
       ),
       title: "ARUS DERAS MENENANGKAN",
