@@ -2,8 +2,8 @@ import 'package:eresource/pages/borrowbook_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class SearchBook extends StatelessWidget {
-  const SearchBook({super.key});
+class BorrowSearh extends StatelessWidget {
+  const BorrowSearh({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +13,19 @@ class SearchBook extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            // leading: IconButton(
-            //     onPressed: () {
-            //       Navigator.pop(context);
-            //     },
-            //     icon: Icon(
-            //       Icons.arrow_back_ios_new,
-            //       color: Colors.black,
-            //       size: 20,
-            //     )),
+            leading: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.arrow_back_ios_new,
+                  color: Colors.black,
+                  size: 20,
+                )),
             title: Padding(
               padding: const EdgeInsets.only(left: 5),
               child: Text(
-                "Cari Buku",
+                "Pinjam Buku",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
