@@ -153,15 +153,15 @@ class _BorrowBookState extends State<BorrowBook> {
                           child: Stack(
                             children: [
                               Text(
-                            "Tersedia",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 13,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400),
-                          ),
+                                "Tersedia",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.w400),
+                              ),
                             ],
                           ),
                         ),
