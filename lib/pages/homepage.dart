@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
 
     _bukuList.add(MenuBuku(
       image: Image.asset(
-        'assets/buku3.png',
+        'assets/book_cover1.png',
         fit: BoxFit.cover,
       ),
       title: "I LOST A PLANET AND GAINED A HOME",
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
     ));
     _bukuList.add(MenuBuku(
       image: Image.asset(
-        'assets/buku3.png',
+        'assets/buku2.png',
         fit: BoxFit.cover,
       ),
       title: "NOVEL MELANGKAH BERSAMA",
@@ -114,12 +114,36 @@ class _HomePageState extends State<HomePage> {
         'assets/buku3.png',
         fit: BoxFit.cover,
       ),
-      title: "ARUS DERAS MENENANGKAN",
-      penulis: "Olivia Wilson",
+      title: "CONQUEST OF FLAMES",
+      penulis: "Shawn Garcia",
       tipe: "Hard Book",
-      tersedia: 4,
+      tersedia: 2,
       kategori: "Novel",
-      navigator: "/buku2",
+      navigator: "/buku3",
+    ));
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku4.png',
+        fit: BoxFit.cover,
+      ),
+      title: "SWORD",
+      penulis: "Olivia Wilson",
+      tipe: "Ebook",
+      tersedia: 1,
+      kategori: "Novel",
+      navigator: "/buku4",
+    ));
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku5.png',
+        fit: BoxFit.cover,
+      ),
+      title: "WALK INTO THE SHADOW",
+      penulis: "Estelle Darcy",
+      tipe: "Ebook",
+      tersedia: 1,
+      kategori: "Novel",
+      navigator: "/buku5",
     ));
   }
 
