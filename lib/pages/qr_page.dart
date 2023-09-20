@@ -7,7 +7,7 @@ class QRPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(28, 20, 28, 0),
+        padding: EdgeInsets.fromLTRB(15, 20, 15, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -36,15 +36,17 @@ class QRPage extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            Container(
-              padding: EdgeInsets.zero,
-              color: Color(0xFF614BC3),
-              height: MediaQuery.of(context).size.width - 56,
-              width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                'assets/qr-code.png',
-                height: MediaQuery.of(context).size.width - 56 - 20,
-                // width: MediaQuery.of(context).size.width - 56 - 20,
+            Center(
+              child: Container(
+                padding: EdgeInsets.zero,
+                color: Color(0xFF614BC3),
+                height: 304,
+                width: 304,
+                child: Image.asset(
+                  'assets/qr-code.png',
+                  height: MediaQuery.of(context).size.width - 56 - 20,
+                  // width: MediaQuery.of(context).size.width - 56 - 20,
+                ),
               ),
             ),
           ],

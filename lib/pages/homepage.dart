@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<MenuHomepage> _menuList = [];
+  List<MenuHomepage> _menuList = [];
   final List<MenuBuku> _bukuList = [];
   final CarouselController _controller = CarouselController();
   final List<Widget> imageSliders = [
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
       tipe: "Hard Book",
       tersedia: 2,
       kategori: "Novel",
-      navigator: "/buku1",
+      navigator: "/borrowbookpage",
     ));
     _bukuList.add(MenuBuku(
       image: Image.asset(
