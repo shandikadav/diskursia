@@ -145,6 +145,18 @@ class _HomePageState extends State<HomePage> {
       kategori: "Novel",
       navigator: "/buku5",
     ));
+    _bukuList.add(MenuBuku(
+      image: Image.asset(
+        'assets/buku6.png',
+        fit: BoxFit.cover,
+      ),
+      title: "WALK INTO THE SHADOW",
+      penulis: "Daniel Gallego",
+      tipe: "Ebook",
+      tersedia: 2,
+      kategori: "Novel",
+      navigator: "/buku6",
+    ));
   }
 
   @override
