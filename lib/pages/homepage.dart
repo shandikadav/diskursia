@@ -49,57 +49,37 @@ class _HomePageState extends State<HomePage> {
 
     //belum bisa menampilkan icon svg
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_pinjam.png',
-        width: 20,
-        height: 20,
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.menu_book,color: Colors.white,),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
       navigator: "/borrowpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_peminjamanaktif.png',
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.book,color: Colors.white,),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "Pinjaman Aktif",
       navigator: "/pinjamaktifpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_riwayat.png',
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.collections_bookmark_rounded,color: Colors.white,),
       color: const Color.fromARGB(255, 34, 23, 80),
       title: "Riwayat Pinjam",
       navigator: "/riwayatpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_ruangan.png',
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.meeting_room,color: Colors.white,),
       color: const Color.fromARGB(255, 21, 80, 60),
       title: "Pinjam Ruang",
       navigator: "/ruanganpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_ebook.png',
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.book_online_rounded,color: Colors.white,),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "eBook",
       navigator: "/ebookpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Image.asset(
-        'assets/menu_bantuan.png',
-        fit: BoxFit.fill,
-      ),
+      image: Icon(Icons.live_help_rounded,color: Colors.white,),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Bantuan",
       navigator: "/bantuanpage",
