@@ -4,8 +4,13 @@ import 'package:eresource/pages/login_page.dart';
 import 'package:eresource/pages/main_page.dart';
 import 'package:eresource/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(const MyApp());
 }
 
