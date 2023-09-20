@@ -1,11 +1,17 @@
+import 'package:eresource/pages/borrowbook_page.dart';
 import 'package:eresource/pages/borrowmenu_page.dart';
 import 'package:eresource/pages/homepage.dart';
 import 'package:eresource/pages/login_page.dart';
 import 'package:eresource/pages/main_page.dart';
 import 'package:eresource/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(const MyApp());
 }
 
@@ -22,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/mainpage': (context) => const MainPage(),
         '/homepage': (context) => const HomePage(),
         '/borrowpage': (context) => const BorrowPage(),
+        '/borrowbookpage': (context) => const BorrowBook(),
       },
     );
   }

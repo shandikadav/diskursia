@@ -1,12 +1,12 @@
-import 'package:eresource/pages/borrowmenu_page.dart';
 import 'package:eresource/pages/homepage.dart';
+import 'package:eresource/pages/profile_page.dart';
 import 'package:eresource/pages/qr_page.dart';
 import 'package:eresource/pages/search_book.dart';
 import 'package:flutter/material.dart';
 
 int currentIndex = 0;
 
-List pages = [HomePage(), SearchBook(), QRPage(), BorrowPage()];
+List pages = [HomePage(), SearchBook(), QRPage(), ProfilePage()];
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

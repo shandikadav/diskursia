@@ -14,13 +14,13 @@ class MenuHomepage {
 }
 
 class MenuBuku {
-  Widget? image;
-  String? title;
-  String? penulis;
-  String? tipe;
-  int? tersedia;
-  String? kategori;
-  String? navigator;
+  Widget image;
+  String title;
+  String penulis;
+  String tipe;
+  int tersedia;
+  String kategori;
+  String navigator;
 
   MenuBuku(
       {required this.image,
