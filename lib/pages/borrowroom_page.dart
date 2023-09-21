@@ -1,8 +1,8 @@
 import 'package:eresource/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
-class HistoryBorrow extends StatelessWidget {
-  const HistoryBorrow({super.key});
+class BorrowRoom extends StatelessWidget {
+  const BorrowRoom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class HistoryBorrow extends StatelessWidget {
               size: 20,
             )),
         title: Text(
-          "Riwayat Peminjaman",
+          "Peminjaman Ruangan",
           style: TextStyle(
               color: Colors.black,
               fontSize: 16,
