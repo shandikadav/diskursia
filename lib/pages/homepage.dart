@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
         'assets/buku6.png',
         fit: BoxFit.cover,
       ),
-      title: "FALLEN ANGEL",
+      title: "BUKU FALLEN ANGEL",
       penulis: "Daniel Gallego",
       tipe: "Ebook",
       tersedia: 2,

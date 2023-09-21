@@ -22,16 +22,27 @@ class _SplashPagesState extends State<SplashPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          width: 190,
-          height: 48,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-            'assets/logo_eresource.png',
-          ))),
-        ),
+      body: Column(
+        children: [
+          Expanded(child: SizedBox()),
+          Center(
+            child: Container(
+              width: 390,
+              height: 168,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                'assets/logo_eresource_splash.png',
+              ))),
+            ),
+          ),
+          Expanded(child: SizedBox()),
+          Text("©Copyright Callousness Team",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500
+          ),)
+        ],
       ),
     );
   }
