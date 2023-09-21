@@ -1,3 +1,4 @@
+import 'package:eresource/pages/activeborrow_page.dart';
 import 'package:eresource/pages/borrowbook_page.dart';
 import 'package:eresource/pages/borrowmenu_page.dart';
 import 'package:eresource/pages/homepage.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/homepage': (context) => const HomePage(),
         '/borrowpage': (context) => const BorrowPage(),
         '/borrowbookpage': (context) => const BorrowBook(),
+        '/activeborrow': (context) => const ActiveBorrow(),
       },
     );
   }
