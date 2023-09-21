@@ -146,7 +146,7 @@ class ProfilePage extends StatelessWidget {
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                     shadowColor: Colors.transparent,
-                    side: BorderSide(color: Colors.black),
+                    side: BorderSide(color: const Color.fromARGB(45, 0, 0, 0)),
                     backgroundColor: Color.fromARGB(255, 248, 248, 248)),
                 child: Container(
                   width: 90,
