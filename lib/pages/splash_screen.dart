@@ -37,11 +37,14 @@ class _SplashPagesState extends State<SplashPages> {
             ),
           ),
           Expanded(child: SizedBox()),
-          Text("©Copyright Callousness Team",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500
-          ),)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Text("©Copyright Callousness Team",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500
+            ),),
+          )
         ],
       ),
     );

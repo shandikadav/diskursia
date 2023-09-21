@@ -29,6 +29,16 @@ class ActiveBorrow extends StatelessWidget {
               fontWeight: FontWeight.w700),
         ),
       ),
+      body: Center(
+        child: Text(
+          "Tidak ada pinjaman aktif sekarang.",
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontFamily: 'Inter',
+              fontWeight: FontWeight.w300),
+        ),
+        ),
     );
   }
 }
