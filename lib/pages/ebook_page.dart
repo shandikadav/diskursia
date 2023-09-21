@@ -21,7 +21,7 @@ class EbookPage extends StatelessWidget {
               size: 20,
             )),
         title: Text(
-          "Pinjam Ebook",
+          "Menu Ebook",
           style: TextStyle(
               color: Colors.black,
               fontSize: 16,

@@ -39,9 +39,12 @@ class QRPage extends StatelessWidget {
             Center(
               child: Container(
                 padding: EdgeInsets.zero,
-                color: Color(0xFF614BC3),
                 height: 304,
                 width: 304,
+                decoration: BoxDecoration(
+                  color: Color(0xFF614BC3),
+                  borderRadius: BorderRadius.circular(20)
+                ),
                 child: Image.asset(
                   'assets/qr-code.png',
                   height: MediaQuery.of(context).size.width - 56 - 20,
