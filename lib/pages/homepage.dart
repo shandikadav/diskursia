@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
       image: Icon(Icons.collections_bookmark_rounded,color: Colors.white,),
       color: const Color.fromARGB(255, 34, 23, 80),
       title: "Riwayat Pinjam",
-      navigator: "/riwayatpage",
+      navigator: "/historyborrow",
     ));
     _menuList.add(MenuHomepage(
       image: Icon(Icons.meeting_room,color: Colors.white,),
