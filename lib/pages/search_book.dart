@@ -48,132 +48,132 @@ class SearchBook extends StatelessWidget {
                 style: TextStyle(fontSize: 13, color: Colors.black),
               ),
             ),
-            Expanded(
-                child: MasonryGridView.builder(
-                    padding: EdgeInsets.zero,
-                    mainAxisSpacing: 6,
-                    itemCount: 5,
-                    shrinkWrap: true,
-                    physics: const ScrollPhysics(),
-                    gridDelegate:
-                        const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                      // childAspectRatio: 4 / 8,
-                      crossAxisCount: 2,
-                      // mainAxisExtent: 360,
-                    ),
-                    itemBuilder: (context, position) {
-                      return InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, "/borrowbookpage");
-                        },
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                              side: BorderSide(
-                                  color: const Color.fromARGB(60, 0, 0, 0))),
-                          child: Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.all(8),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0),
-                                  child: Image.asset('assets/book_cover1.png'),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 18, right: 18, top: 0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'I LOST A PLANET AND GAINED A HOME',
-                                      textAlign: TextAlign.start,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 2,
-                                      style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 12),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 2),
-                                      child: Text(
-                                        'Katie Johnson',
-                                        textAlign: TextAlign.start,
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 10,
-                                          color:
-                                              Color.fromRGBO(21, 80, 60, 1.0),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 4),
-                                      child: Text(
-                                        "Tipe Buku : Hard Book",
-                                        textAlign: TextAlign.start,
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 10,
-                                          color:
-                                              Color.fromRGBO(21, 80, 60, 1.0),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 4),
-                                      child: Text(
-                                        "Tersedia : 2",
-                                        textAlign: TextAlign.start,
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 10,
-                                          color:
-                                              Color.fromRGBO(21, 80, 60, 1.0),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 4),
-                                      child: Text(
-                                        "Kategori : Novel",
-                                        textAlign: TextAlign.start,
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 10,
-                                          color:
-                                              Color.fromRGBO(21, 80, 60, 1.0),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    }))
+            // Expanded(
+            //     child: MasonryGridView.builder(
+            //         padding: EdgeInsets.zero,
+            //         mainAxisSpacing: 6,
+            //         itemCount: 5,
+            //         shrinkWrap: true,
+            //         physics: const ScrollPhysics(),
+            //         gridDelegate:
+            //             const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+            //           // childAspectRatio: 4 / 8,
+            //           crossAxisCount: 2,
+            //           // mainAxisExtent: 360,
+            //         ),
+            //         itemBuilder: (context, position) {
+            //           return InkWell(
+            //             onTap: () {
+            //               Navigator.pushNamed(context, "/borrowbookpage");
+            //             },
+            //             child: Card(
+            //               shape: RoundedRectangleBorder(
+            //                   borderRadius: BorderRadius.circular(8.0),
+            //                   side: BorderSide(
+            //                       color: const Color.fromARGB(60, 0, 0, 0))),
+            //               child: Column(
+            //                 children: [
+            //                   Container(
+            //                     margin: EdgeInsets.all(8),
+            //                     child: ClipRRect(
+            //                       borderRadius: BorderRadius.circular(0),
+            //                       child: Image.asset('assets/book_cover1.png'),
+            //                     ),
+            //                   ),
+            //                   Padding(
+            //                     padding: const EdgeInsets.only(
+            //                         left: 18, right: 18, top: 0),
+            //                     child: Column(
+            //                       crossAxisAlignment: CrossAxisAlignment.start,
+            //                       children: [
+            //                         Text(
+            //                           'I LOST A PLANET AND GAINED A HOME',
+            //                           textAlign: TextAlign.start,
+            //                           overflow: TextOverflow.ellipsis,
+            //                           maxLines: 2,
+            //                           style: TextStyle(
+            //                               fontFamily: 'Inter',
+            //                               fontWeight: FontWeight.w700,
+            //                               fontSize: 12),
+            //                         ),
+            //                         Padding(
+            //                           padding: const EdgeInsets.only(top: 2),
+            //                           child: Text(
+            //                             'Katie Johnson',
+            //                             textAlign: TextAlign.start,
+            //                             overflow: TextOverflow.ellipsis,
+            //                             maxLines: 2,
+            //                             style: TextStyle(
+            //                               fontFamily: 'Inter',
+            //                               fontWeight: FontWeight.w500,
+            //                               fontSize: 10,
+            //                               color:
+            //                                   Color.fromRGBO(21, 80, 60, 1.0),
+            //                             ),
+            //                           ),
+            //                         ),
+            //                         SizedBox(
+            //                           height: 5,
+            //                         ),
+            //                         Padding(
+            //                           padding: const EdgeInsets.only(top: 4),
+            //                           child: Text(
+            //                             "Tipe Buku : Hard Book",
+            //                             textAlign: TextAlign.start,
+            //                             overflow: TextOverflow.ellipsis,
+            //                             maxLines: 2,
+            //                             style: TextStyle(
+            //                               fontFamily: 'Inter',
+            //                               fontWeight: FontWeight.w500,
+            //                               fontSize: 10,
+            //                               color:
+            //                                   Color.fromRGBO(21, 80, 60, 1.0),
+            //                             ),
+            //                           ),
+            //                         ),
+            //                         Padding(
+            //                           padding: const EdgeInsets.only(top: 4),
+            //                           child: Text(
+            //                             "Tersedia : 2",
+            //                             textAlign: TextAlign.start,
+            //                             overflow: TextOverflow.ellipsis,
+            //                             maxLines: 2,
+            //                             style: TextStyle(
+            //                               fontFamily: 'Inter',
+            //                               fontWeight: FontWeight.w500,
+            //                               fontSize: 10,
+            //                               color:
+            //                                   Color.fromRGBO(21, 80, 60, 1.0),
+            //                             ),
+            //                           ),
+            //                         ),
+            //                         Padding(
+            //                           padding: const EdgeInsets.only(top: 4),
+            //                           child: Text(
+            //                             "Kategori : Novel",
+            //                             textAlign: TextAlign.start,
+            //                             overflow: TextOverflow.ellipsis,
+            //                             maxLines: 2,
+            //                             style: TextStyle(
+            //                               fontFamily: 'Inter',
+            //                               fontWeight: FontWeight.w500,
+            //                               fontSize: 10,
+            //                               color:
+            //                                   Color.fromRGBO(21, 80, 60, 1.0),
+            //                             ),
+            //                           ),
+            //                         ),
+            //                         SizedBox(
+            //                           height: 15,
+            //                         )
+            //                       ],
+            //                     ),
+            //                   ),
+            //                 ],
+            //               ),
+            //             ),
+            //           );
+            //         }))
           ],
         ),
       ),
