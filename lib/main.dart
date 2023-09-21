@@ -3,6 +3,7 @@ import 'package:eresource/pages/borrowbook_page.dart';
 import 'package:eresource/pages/borrowmenu_page.dart';
 import 'package:eresource/pages/borrowroom_page.dart';
 import 'package:eresource/pages/ebook_page.dart';
+import 'package:eresource/pages/help_page.dart';
 import 'package:eresource/pages/historyborrow_page.dart';
 import 'package:eresource/pages/homepage.dart';
 import 'package:eresource/pages/login_page.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/historyborrow': (context) => const HistoryBorrow(),
         '/ruanganpage': (context) => const BorrowRoom(),
         '/ebookpage': (context) => const EbookPage(),
+        '/bantuanpage': (context) => const HelpPage(),
       },
     );
   }
