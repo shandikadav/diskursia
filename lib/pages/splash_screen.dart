@@ -27,8 +27,8 @@ class _SplashPagesState extends State<SplashPages> {
           Expanded(child: SizedBox()),
           Center(
             child: Container(
-              width: 390,
-              height: 168,
+              width: 310,
+              height: 120,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
