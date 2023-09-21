@@ -1,4 +1,4 @@
-import 'package:eresource/pages/homepage.dart';
+import 'package:eresource/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,9 +24,9 @@ class _LoginPageState extends State<LoginPage> {
             Container(
               child: Center(
                   child: Image.asset(
-                "assets/logo_eresource.png",
-                width: 190,
-                height: 48,
+                "assets/logo_eresource_splash.png",
+                width: 290,
+                height: 88,
               )),
             ),
             const SizedBox(
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => const MainPage()),
                   );
                 },
                 child: Text(
