@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:eresource/pages/search_book.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../models/homepage_model.dart';
@@ -271,7 +272,12 @@ class _HomePageState extends State<HomePage> {
                     style: ButtonStyle(
                         overlayColor:
                             MaterialStateProperty.all(Colors.transparent)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SearchBook()),
+                  );
+                    },
                     child: Text(
                       'Lihat Semua',
                       style: TextStyle(
