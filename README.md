@@ -1,17 +1,18 @@
-# eresource
 
-A new Flutter project.
+![Logo](https://i.ibb.co/vZxCpB5/E-Resource-App-Project-2.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# E RESOURCE MOBILE APP
 
-A few resources to get you started if this is your first Flutter project:
+Eresource app merupakan aplikasi perpustakaan dengan studi kasus perpustakan resource center yang ada di Universitas Amikom Yogyakarta. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Kami rasa dengan fasilitas yang diberikan oleh Resource Center Universitas Amikom Yogyakarta kepada mahasiswa dapat dibuat lebih efektif jika kita membuat sistem aplikasi berbasis mobile.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# eresource_app
+Project ini hanya berupa Front End Mobile App dan di develop menggunakan Flutter. Project ini dibuat untuk keperluan Lomba yang dilaksanakan oleh IITC Universitas Amikom Purwokerto.
+
+
+## Authors
+
+- [@shandikadav](https://www.github.com/shandikadav)
+- [@GuidoAugusta](https://www.github.com/GuidoAugusta)
+
