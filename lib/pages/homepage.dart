@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<MenuHomepage> _menuList = [];
   final List<MenuBuku> _bukuList = [];
-  final CarouselController _controller = CarouselController();
+  final CarouselSliderController _controller = CarouselSliderController();
   final List<Widget> imageSliders = [
     Container(
       width: 350,
@@ -50,37 +50,55 @@ class _HomePageState extends State<HomePage> {
 
     //belum bisa menampilkan icon svg
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.menu_book,color: Colors.white,),
+      image: Icon(
+        Icons.menu_book,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Pinjam Buku",
       navigator: "/borrowpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.book,color: Colors.white,),
+      image: Icon(
+        Icons.book,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "Pinjaman Aktif",
       navigator: "/activeborrow",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.collections_bookmark_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.collections_bookmark_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 34, 23, 80),
       title: "Riwayat Pinjam",
       navigator: "/historyborrow",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.meeting_room,color: Colors.white,),
+      image: Icon(
+        Icons.meeting_room,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 21, 80, 60),
       title: "Pinjam Ruang",
       navigator: "/ruanganpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.book_online_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.book_online_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 32, 32, 49),
       title: "eBook",
       navigator: "/ebookpage",
     ));
     _menuList.add(MenuHomepage(
-      image: Icon(Icons.live_help_rounded,color: Colors.white,),
+      image: Icon(
+        Icons.live_help_rounded,
+        color: Colors.white,
+      ),
       color: const Color.fromARGB(255, 10, 40, 43),
       title: "Bantuan",
       navigator: "/bantuanpage",
@@ -274,9 +292,10 @@ class _HomePageState extends State<HomePage> {
                             MaterialStateProperty.all(Colors.transparent)),
                     onPressed: () {
                       Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SearchBook()),
-                  );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SearchBook()),
+                      );
                     },
                     child: Text(
                       'Lihat Semua',
