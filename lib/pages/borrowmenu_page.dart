@@ -1,4 +1,4 @@
-import 'package:eresource/pages/borrowsearch_page.dart';
+import 'package:diskursia/pages/borrowsearch_page.dart';
 import 'package:flutter/material.dart';
 
 class BorrowPage extends StatelessWidget {
@@ -35,7 +35,7 @@ class BorrowPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   height: 130,
                   width: double.infinity,

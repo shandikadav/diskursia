@@ -1,4 +1,4 @@
-import 'package:eresource/pages/homepage.dart';
+import 'package:diskursia/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 class BorrowRoom extends StatelessWidget {

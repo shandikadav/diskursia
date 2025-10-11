@@ -1,7 +1,7 @@
-import 'package:eresource/pages/homepage.dart';
-import 'package:eresource/pages/profile_page.dart';
-import 'package:eresource/pages/qr_page.dart';
-import 'package:eresource/pages/search_book.dart';
+import 'package:diskursia/pages/homepage.dart';
+import 'package:diskursia/pages/profile_page.dart';
+import 'package:diskursia/pages/qr_page.dart';
+import 'package:diskursia/pages/search_book.dart';
 import 'package:flutter/material.dart';
 
 int currentIndex = 0;

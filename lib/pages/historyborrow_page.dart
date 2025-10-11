@@ -1,4 +1,4 @@
-import 'package:eresource/pages/homepage.dart';
+import 'package:diskursia/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 class HistoryBorrow extends StatelessWidget {
@@ -38,7 +38,7 @@ class HistoryBorrow extends StatelessWidget {
               fontFamily: 'Inter',
               fontWeight: FontWeight.w300),
         ),
-        ),
+      ),
     );
   }
 }

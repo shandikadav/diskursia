@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:diskursia/config/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 class SplashPages extends StatefulWidget {
@@ -14,7 +15,7 @@ class _SplashPagesState extends State<SplashPages> {
     // TODO: implement initState
 
     Timer(Duration(seconds: 2),
-        (() => Navigator.pushNamed(context, '/login')));
+        (() => router.pushReplacementNamed(NameRouter.login)));
 
     super.initState();
   }
@@ -39,11 +40,10 @@ class _SplashPagesState extends State<SplashPages> {
           Expanded(child: SizedBox()),
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: Text("©Copyright Callousness Team",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500
-            ),),
+            child: Text(
+              "©Copyright Callousness Team",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            ),
           )
         ],
       ),

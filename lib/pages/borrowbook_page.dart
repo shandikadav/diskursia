@@ -1,4 +1,4 @@
-import 'package:eresource/pages/search_book.dart';
+import 'package:diskursia/pages/search_book.dart';
 import 'package:flutter/material.dart';
 
 class BorrowBook extends StatefulWidget {

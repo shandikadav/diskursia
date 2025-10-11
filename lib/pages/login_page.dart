@@ -1,4 +1,4 @@
-import 'package:eresource/pages/main_page.dart';
+import 'package:diskursia/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
