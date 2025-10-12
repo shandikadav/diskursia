@@ -1,3 +1,4 @@
+import 'package:diskursia/config/router/app_router.dart';
 import 'package:diskursia/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
@@ -80,10 +81,7 @@ class _LoginPageState extends State<LoginPage> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MainPage()),
-                  );
+                  router.pushReplacementNamed('main');
                 },
                 child: Text(
                   'Login',

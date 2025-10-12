@@ -1,4 +1,5 @@
 import 'package:diskursia/pages/login_page.dart';
+import 'package:diskursia/pages/main_page.dart';
 import 'package:diskursia/pages/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -14,5 +15,10 @@ final router = GoRouter(routes: [
     path: "/login",
     name: NameRouter.login,
     builder: (context, state) => LoginPage(),
+  ),
+  GoRoute(
+    path: "/main",
+    name: NameRouter.main,
+    builder: (context, state) => MainPage(),
   ),
 ]);
